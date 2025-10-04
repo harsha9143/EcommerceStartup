@@ -6,8 +6,8 @@ const cartController = require("../controllers/cartController");
 
 cartRouter.get("/", cartController.getCartItems);
 
-cartRouter.get("/:userId", cartController.getSingleItem);
+cartRouter.get("/:id", cartController.getSingleItem);
 
-cartRouter.post("/:userId", cartController.addToCart);
+cartRouter.post("/:id", cartController.addToCart);
 
 module.exports = cartRouter;
