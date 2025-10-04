@@ -1,9 +1,11 @@
+const path = require("path");
+
 exports.getAllUsers = (req, res, next) => {
-  res.send("<h1>Fetching all users</h1>");
+  res.sendFile(path.join(__dirname, "..", "views", "users.html"));
 };
 
 exports.addNewUser = (req, res, next) => {
-  res.send("<h1>Adding a new user</h1>");
+  res.send(path.join(__dirname, "..", "views", "addUser.html"));
 };
 
 exports.getUserById = (req, res, next) => {
